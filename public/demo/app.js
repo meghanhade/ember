@@ -89,7 +89,7 @@ App.ProductReviewsNewController = Ember.ObjectController.extend({
   actions: {
     createReview: function() {
       var product = this.get('model'),
-          review = this.store.createRecord('review', {review: this.get('reviewText')})
+          review = this.store.createRecord('review', {review: this.get('reviewText')});
       product.get('reviews').addObject(review);
     }
   }
